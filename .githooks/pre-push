@@ -1,3 +1,6 @@
 #!/bin/bash
 
-sass index.scss:out.css
+TMP_DIR=$(mktemp -d)
+
+sass index.scss:style.css
+rm -rf ${TMP_DIR}*
