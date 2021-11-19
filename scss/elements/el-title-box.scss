@@ -1,0 +1,15 @@
+.title-box {
+    @include box-color-pattern($theme-color: $color-text, $invert: false);
+    @include box-color-pattern-set();
+    padding: 20px;
+    align-items: center;
+    & > * {
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5%;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    @include box-element-options();
+}

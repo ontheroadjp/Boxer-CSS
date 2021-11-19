@@ -1,0 +1,44 @@
+@function calc-el-width($full-width, $number) {
+    @return calc((#{$full-width} - #{$box-separate-width} * (#{$number} - 1) ) / #{$number});
+}
+
+@mixin box-options($box-no) {
+    @include cosmetic-options($img-round: false);
+
+    &.vertical {
+        flex-flow: column wrap;
+        & > * {
+            width: 100%;
+            height: calc(100% / #{$box-no});
+        }
+    }
+
+    &.separate {
+        & > * {
+            width: calc-el-width(100%, #{$box-no});
+            margin-left: $box-separate-width;
+            &:first-child { margin-left: 0; }
+        }
+
+        &.vertical {
+            & > * {
+                width: 100%;
+                height: calc-el-width(100%, #{$box-no});
+                margin-left: 0;
+                margin-bottom: $box-separate-width * 0.8;
+                &:last-child { margin-bottom: 0; }
+            }
+        }
+    }
+
+    @for $i from 1 through 12 {
+        $n: $i * 50;
+        &.h-#{$n} {
+            height: #{$n}px;
+        }
+    }
+
+    &.last {
+        margin-bottom: $element-last-margin-bottom;
+    }
+}

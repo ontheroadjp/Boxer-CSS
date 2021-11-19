@@ -1,0 +1,23 @@
+.text-label {
+    @include flexbox($ff: row, $jc: center);
+    @include box-color-pattern($theme-color: $color-text, $invert: false);
+    @include box-color-pattern-set();
+
+    padding: 5px;
+    align-items: center;
+
+    & > * {
+        width: auto;
+        margin-left: $element-gap;
+        margin-bottom: 0;
+        text-align: left;
+        &:first-child {
+            margin-left: 0
+        }
+    }
+
+    @include box-element-options();
+    &.center { justify-content: center }
+    &.left { justify-content: flex-start }
+    &.right { justify-content: flex-end }
+}

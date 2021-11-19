@@ -1,0 +1,34 @@
+@for $i from 1 through 8 {
+    .box-#{$i} {
+        @include flexbox($ff:row);
+        width: 100%;
+        height: 100%;
+
+        & > * {
+            width: calc(100% / #{$i});
+        }
+
+        @include box-options(#{$i})
+    }
+
+/*
+    @include mq('tablet') {
+        & > * {
+            width: 100%;
+        }
+
+        &.last {
+            margin-bottom: $element-last-margin-bottom / 3;
+        }
+
+        &.separate {
+            &  > * {
+                margin-right: 0;
+                margin-left: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+    }
+*/
+}

@@ -1,0 +1,146 @@
+@charset "UTF-8";
+*::selection {
+  background: #fff0f5; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html, body {
+  height: 100%;
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "ＭＳ Ｐゴシック", sans-serif;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6em;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  color: #444;
+  background-color: #fafafa; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
+  h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, p.center {
+    text-align: center; }
+  h1.left, h2.left, h3.left, h4.left, h5.left, h6.left, p.left {
+    text-align: left; }
+  h1.right, h2.right, h3.right, h4.right, h5.right, h6.right, p.right {
+    text-align: right; }
+
+h1 {
+  font-weight: 400; }
+
+a {
+  text-decoration: none;
+  color: #2c638f; }
+
+img {
+  display: block; }
+
+ul {
+  padding: 0;
+  list-style: none; }
+
+@font-face {
+  font-family: "Libre-Baskerville-Reg";
+  font-display: fallback;
+  font-style: normal;
+  src: local("Libre Baskerville"), local("LibreBaskerville-Regular"), url("../fonts/libre-baskerville-v5-latin-regular.woff2") format("woff2"), url("../fonts/libre-baskerville-v5-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+.xxl {
+  font-size: 3.31776em !important; }
+
+.xl {
+  font-size: 2.7648em !important; }
+
+.ll {
+  font-size: 2.304em !important; }
+
+.l {
+  font-size: 1.92em !important; }
+
+.m {
+  font-size: 1.6em !important; }
+
+.s {
+  font-size: 1.28em !important; }
+
+.ss {
+  font-size: 1.28em !important; }
+
+.xs {
+  font-size: 1.024em !important; }
+
+.bg-primary {
+  background-color: #794341 !important; }
+
+.color-primary {
+  color: #794341 !important; }
+  .color-primary > div[class^="html5-webpack-works-icon"] {
+    color: #794341 !important; }
+
+.bg-secondary {
+  background-color: #cc6f65 !important; }
+
+.color-secondary {
+  color: #cc6f65 !important; }
+  .color-secondary > div[class^="html5-webpack-works-icon"] {
+    color: #cc6f65 !important; }
+
+.bg-tertiary {
+  background-color: #cb9489 !important; }
+
+.color-tertiary {
+  color: #cb9489 !important; }
+  .color-tertiary > div[class^="html5-webpack-works-icon"] {
+    color: #cb9489 !important; }
+
+.bg-accent {
+  background-color: #416479 !important; }
+
+.color-accent {
+  color: #416479 !important; }
+  .color-accent > div[class^="html5-webpack-works-icon"] {
+    color: #416479 !important; }
+
+.bg-black {
+  background-color: #09090e !important; }
+
+.color-black {
+  color: #09090e !important; }
+  .color-black > div[class^="html5-webpack-works-icon"] {
+    color: #09090e !important; }
+
+.bg-white {
+  background-color: #fff !important; }
+
+.color-white {
+  color: #fff !important; }
+  .color-white > div[class^="html5-webpack-works-icon"] {
+    color: #fff !important; }
+
+.bg-grey {
+  background-color: #d7d7d7 !important; }
+
+.color-grey {
+  color: #d7d7d7 !important; }
+  .color-grey > div[class^="html5-webpack-works-icon"] {
+    color: #d7d7d7 !important; }
+
+.bg-light-grey {
+  background-color: #fafafa !important; }
+
+.color-light-grey {
+  color: #fafafa !important; }
+  .color-light-grey > div[class^="html5-webpack-works-icon"] {
+    color: #fafafa !important; }
+
+.skelton {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important; }
+
+/*# sourceMappingURL=box.css.map */

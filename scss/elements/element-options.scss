@@ -1,0 +1,19 @@
+@mixin box-element-options($img-round: false) {
+
+    // .text-box, img-box, etc.
+    @include cosmetic-options($img-round);
+    &.top { justify-content: flex-start }
+    &.middle { justify-content: center }
+    &.bottom { justify-content: flex-end }
+    &.center { align-items: center }
+    &.right { align-items: right }
+    &.left { align-items: left }
+
+    // h2, p, etc
+    & > * {
+        @include cosmetic-options($img-round);
+        &.center { text-align: center }
+        &.right { text-align: right }
+        &.left { text-align: left }
+    }
+}

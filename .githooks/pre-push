@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sass index.scss:out.css

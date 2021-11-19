@@ -1,0 +1,10 @@
+@mixin flexbox($ff: column wrap, $jc: '', $ai: '') {
+    display: flex;
+    flex-flow: $ff;
+    @if $jc != '' {
+        justify-content: $jc;
+    }
+    @if $ai != '' {
+        align-items: $ai;
+    }
+}

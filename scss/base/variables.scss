@@ -1,0 +1,49 @@
+// Base Colors
+$white: #fff;
+$grey: #d7d7d7;
+$light-grey: #fafafa;
+$black: #09090e;
+$black-soft: #444;
+$blue: #2c638f;
+$pink: #fff0f5;
+$yellow: #fffacd;
+
+// Site Colors
+//$color-primary: rgb(0, 128, 128);
+//$color-secondary: rgb(0, 206, 209);
+//$color-tertiary: rgb(95, 158, 160);
+
+//$color-primary: #6a597d;
+//$color-secondary: #ba98de;
+//$color-tertiary: #f1d6e0;
+
+$color-primary: #794341;
+$color-secondary: #cc6f65;
+$color-tertiary: #cb9489;
+$color-accent: adjust-hue($color-primary, 200);
+
+//$color-bg: lighten($color-primary, 75%);
+$color-bg: $light-grey;
+$color-text: $black-soft;
+
+// Font Size
+$font-m: 1.6em;
+$font-l: $font-m * 1.2;
+$font-ll: $font-l * 1.2;
+$font-xl: $font-ll * 1.2;
+$font-xxl: $font-xl * 1.2;
+$font-s: $font-m * 0.8;
+$font-ss: $font-m * 0.8;
+$font-xs: $font-s * 0.8;
+$font-xxs: $font-s * 0.8;
+
+// Section/Box
+$narrow-wrapper-width: 30px;
+$box-separate-width: 5px;
+$section-margin-bottom: 50px;
+
+// Element
+$element-gap: 10px;
+$element-last-margin-bottom: $section-margin-bottom;
+
+$border-radius-size: 5px;

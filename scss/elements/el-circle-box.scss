@@ -1,0 +1,26 @@
+@mixin el-circle-box($size: 200) {
+    .circle-box-#{$size} {
+        @include flexbox($jc: center, $ai: center);
+
+        .circle {
+            @include flexbox($ff: column nowrap, $jc: center, $ai: center);
+            @include box-color-pattern-set();
+
+            width: #{$size}px;
+            height: #{$size}px;
+            border-radius: 50%;
+            background-color: $white;
+
+            & > * {
+                width: 100%;
+                text-align: center;
+            }
+            @include box-element-options();
+        }
+    }
+}
+
+@for $i from 0 through 8 {
+    $n: 100 + $i * 25;
+    @include el-circle-box($size: #{$n})
+}

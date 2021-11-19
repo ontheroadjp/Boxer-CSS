@@ -1,0 +1,31 @@
+.box-frame {
+    @include flexbox($ff:row);
+    width: 100%;
+
+    @for $i from 1 through 12 {
+        .bf-#{$i} {
+            width: calc(100% / 12 * #{$i});
+        }
+    }
+
+    &.separate {
+        & > * {
+            margin-left: $box-separate-width;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &.last {
+        margin-bottom: $section-margin-bottom;
+    }
+
+
+    @for $i from 1 through 12 {
+        $n: $i * 50;
+        &.h-#{$n} {
+            height: #{$n}px;
+        }
+    }
+}

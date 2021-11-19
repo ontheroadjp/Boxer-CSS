@@ -1,0 +1,60 @@
+// HTML Tags
+*::selection {
+    background: $pink;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", Hiragino Kaku Gothic Pro, "ＭＳ Ｐゴシック", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px, 3.5rem = 35px;
+}
+
+body {
+//    font-family: $font-body;
+    font-size: 1.6em;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    color: $color-text;
+    background-color: $color-bg;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    &.center {
+        text-align: center;
+    }
+    &.left {
+        text-align: left;
+    }
+    &.right {
+        text-align: right;
+    }
+}
+
+h1 {
+//    font-family: $font-heading, serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: $blue;
+}
+
+img {
+    display: block;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}

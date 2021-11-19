@@ -1,0 +1,88 @@
+// Global Colors
+@each $name, $value in (primary, $color-primary),
+                (secondary, $color-secondary),
+                (tertiary, $color-tertiary),
+                (accent, $color-accent),
+                (black, $black),
+                (white, $white),
+                (grey, $grey),
+                (light-grey, $light-grey) {
+    .bg-#{$name} {
+        background-color: $value !important;
+    }
+    .color-#{$name} {
+        color: $value !important;
+        > div[class^="html5-webpack-works-icon"] {
+            color: #{$value} !important;
+        }
+    }
+}
+
+.skelton {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+// Box Colors
+@mixin box-color-pattern($theme-color: $white, $invert: false) {
+    background-color: if($invert, $theme-color, $white);
+    color: if($invert, $white, $color-text);
+    > .icon-box > div[class^="html5-webpack-works-icon"] {
+        color: if($invert, $white, $theme-color);
+    }
+}
+
+@mixin box-color-pattern-set() {
+    @each $name, $s in (1, 30px), (2, 60px), (3, 80px) {
+        &.icon-circle-#{$name} {
+            > .icon-box > div[class^="html5-webpack-works-icon"] {
+                @if $name == 1 {
+                    @include circle-icon($size: $s, $padding: 6px);
+                } @else {
+                    @include circle-icon($size: $s);
+                }
+            }
+
+            @each $name, $value in (primary, $color-primary),
+                            (secondary, $color-secondary),
+                            (tertiary, $color-tertiary),
+                            (accent, $color-accent),
+                            (black, $black),
+                            (white, $white),
+                            (grey, $grey),
+                            (light-grey, $light-grey) {
+                &.box-#{$name} {
+                    > .icon-box > div[class^="html5-webpack-works-icon"] {
+                        background-color: $value;
+                        color: $white;
+                    }
+                }
+                &.box-#{$name}-fill {
+                    > .icon-box > div[class^="html5-webpack-works-icon"] {
+                        background-color: $white;
+                        color: $value;
+                    }
+                }
+            }
+        }
+    }
+
+    @each $name, $value in  (primary, $color-primary),
+                            (secondary, $color-secondary),
+                            (tertiary, $color-tertiary),
+                            (accent, $color-accent),
+                            (black, $black),
+                            (white, $white),
+                            (grey, $grey),
+                            (light-grey, $light-grey) {
+        &.box-#{$name} {
+            @include box-color-pattern($theme-color: $value, $invert: false);
+        }
+        &.box-#{$name}-fill {
+            @include box-color-pattern($theme-color: $value, $invert: true);
+        }
+    }
+}
+
+

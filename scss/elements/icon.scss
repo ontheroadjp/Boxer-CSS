@@ -1,0 +1,18 @@
+@mixin circle-icon($size: 60px, $padding: 12px) {
+    padding: $padding;
+    border-radius: calc(#{$size} / 2);
+    font-family: "";
+    width: $size;
+    height: $size;
+    background: $color-text;
+    color: $color-bg;
+}
+
+//@mixin circle-border-icon($icon-size: 96px, $border-size: 8px) {
+//    @include circle-icon($size: $icon-size);
+//    border: $border-size solid $color-tertiary;
+//}
+
+.icon-box {
+    @include flexbox($ai: center);
+}

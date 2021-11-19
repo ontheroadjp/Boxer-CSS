@@ -1,0 +1,26 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: $light-grey;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $grey;
+    .link {
+        &:hover {
+            color: darken($color-primary, 15);
+        }
+    }
+    .logo {
+        padding: 10px 10px;
+        margin-right: 10px;
+        border-right: 1px solid $grey;
+        &:hover {
+            background: $pink;
+        }
+    }
+    .logo-img {
+        width: 25px;
+        height: 25px;
+    }
+}

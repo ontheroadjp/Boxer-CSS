@@ -1,0 +1,20 @@
+.text-box {
+    @include flexbox();
+    @include box-color-pattern($theme-color: $color-text, $invert: false);
+    @include box-color-pattern-set();
+    padding: 20px;
+    height: auto;
+    align-items: center;
+    color: inherit;
+
+    & > * {
+        width: 100%;
+        margin-top: $element-gap;
+        text-align: center;
+        word-wrap: break-word;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    @include box-element-options();
+}

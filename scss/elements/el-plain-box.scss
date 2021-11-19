@@ -1,0 +1,24 @@
+.plane-box {
+    padding: 20px;
+    width: 100%;
+
+    & > * {
+        margin-left: $element-gap;
+        word-wrap: break-word;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &.vertical {
+        & > * {
+            margin-top: $element-gap;
+            margin-left: 0;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include box-element-options($img-round: true);
+}
