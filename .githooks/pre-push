@@ -2,5 +2,7 @@
 
 TMP_DIR=$(mktemp -d)
 
-sass index.scss:style.css
+printf 'pre-push...'
+sass index.scss:${TMP_DIR}/style.css
 rm -rf ${TMP_DIR}*
+printf 'ok.'
