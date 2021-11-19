@@ -7,10 +7,10 @@
                 (white, $white),
                 (grey, $grey),
                 (light-grey, $light-grey) {
-    .bg-#{$name} {
+    .bg-#{"" + $name} {
         background-color: $value !important;
     }
-    .color-#{$name} {
+    .color-#{"" + $name} {
         color: $value !important;
         > div[class^="html5-webpack-works-icon"] {
             color: #{$value} !important;
@@ -52,13 +52,13 @@
                             (white, $white),
                             (grey, $grey),
                             (light-grey, $light-grey) {
-                &.box-#{$name} {
+                &.box-#{"" + $name} {
                     > .icon-box > div[class^="html5-webpack-works-icon"] {
                         background-color: $value;
                         color: $white;
                     }
                 }
-                &.box-#{$name}-fill {
+                &.box-#{"" + $name}-fill {
                     > .icon-box > div[class^="html5-webpack-works-icon"] {
                         background-color: $white;
                         color: $value;
@@ -76,10 +76,10 @@
                             (white, $white),
                             (grey, $grey),
                             (light-grey, $light-grey) {
-        &.box-#{$name} {
+        &.box-#{"" + $name} {
             @include box-color-pattern($theme-color: $value, $invert: false);
         }
-        &.box-#{$name}-fill {
+        &.box-#{"" + $name}-fill {
             @include box-color-pattern($theme-color: $value, $invert: true);
         }
     }
