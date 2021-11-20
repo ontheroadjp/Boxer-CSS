@@ -1,3 +1,8 @@
 #!/bin/bash
 
-sass index.scss:out.css
+TMP_DIR=$(mktemp -d)
+
+printf '\033[1;36m%s\033[m''pre-push...'
+sass index.scss:${TMP_DIR}/style.css
+rm -rf ${TMP_DIR}*
+printf '\033[1;36m%s\033[m\n' "ok."
